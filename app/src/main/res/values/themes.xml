@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Light palette (dark palette in values-night/colors.xml) -->
+    <color name="bg">#FFF7F7FC</color>
+    <color name="surface">#FFE8EAF6</color>
+    <color name="text">#FF1A1B2E</color>
+    <color name="text_secondary">#FF5F6075</color>
+    <color name="accent">#FF3F51B5</color>
+    <color name="on_accent">#FFFFFFFF</color>
+    <color name="icon_bg">#FF283593</color>
+    <bool name="light_bars">true</bool>
+
+    <!-- Platform.AppTheme picks light/dark widgets; overridden in values-night. -->
+    <style name="Platform.AppTheme" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="Base.AppTheme" parent="Platform.AppTheme">
+        <item name="android:colorAccent">@color/accent</item>
+        <item name="android:colorPrimary">@color/bg</item>
+        <item name="android:windowBackground">@color/bg</item>
+        <item name="android:statusBarColor">@color/bg</item>
+        <item name="android:navigationBarColor">@color/bg</item>
+        <item name="android:windowLightStatusBar">@bool/light_bars</item>
+        <item name="android:textColorPrimary">@color/text</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+    </style>
+
+    <style name="AppTheme" parent="Base.AppTheme" />
+
+    <style name="Label">
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.12</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="Tile">
+        <item name="android:background">@drawable/tile</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+    </style>
+
+    <style name="PrimaryButton" parent="Tile">
+        <item name="android:background">@drawable/btn_primary</item>
+        <item name="android:textColor">@color/on_accent</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+</resources>
